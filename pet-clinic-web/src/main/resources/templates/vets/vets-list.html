@@ -6,6 +6,10 @@
 </head>
 <body>
     <h1 th:text="'List of vets...'">Vets page</h1>
-
+    <tr th:each="vet : ${vets}">
+        <td th:text="${vet.getId()}"></td>
+        <td th:text="${vet.getFirstName()}"></td>
+        <td th:text="${vet.getLastName()}"></td>
+    </tr>
 </body>
 </html>

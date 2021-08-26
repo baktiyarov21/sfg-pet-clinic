@@ -2,6 +2,7 @@ package com.arsenbaktiyarov.sfgpetclinic.bootstrap;
 
 
 import com.arsenbaktiyarov.sfgpetclinic.model.Owner;
+import com.arsenbaktiyarov.sfgpetclinic.model.Vet;
 import com.arsenbaktiyarov.sfgpetclinic.service.OwnerService;
 import com.arsenbaktiyarov.sfgpetclinic.service.VetService;
 import org.springframework.boot.CommandLineRunner;
@@ -39,6 +40,25 @@ public class DataLoader implements CommandLineRunner {
         owner2.setLastName("Whittaker");
         ownerService.save(owner2);
         System.out.println("Owners was created");
+
+        Vet vet = new Vet();
+        vet.setId(1l);
+        vet.setFirstName("Holloway");
+        vet.setLastName("Max");
+
+        Vet vet2 = new Vet();
+        vet2.setId(2l);
+        vet2.setFirstName("Sam");
+        vet2.setLastName("rrr");
+
+        Vet vet3 = new Vet();
+        vet3.setId(3l);
+        vet3.setFirstName("aaa");
+        vet3.setLastName("bbbb");
+
+        vetService.save(vet);
+        vetService.save(vet2);
+        vetService.save(vet3);
 
 //        System.out.println(ownerService.findById(1L));
     }
