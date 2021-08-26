@@ -4,8 +4,6 @@ package com.arsenbaktiyarov.sfgpetclinic.bootstrap;
 import com.arsenbaktiyarov.sfgpetclinic.model.Owner;
 import com.arsenbaktiyarov.sfgpetclinic.service.OwnerService;
 import com.arsenbaktiyarov.sfgpetclinic.service.VetService;
-import com.arsenbaktiyarov.sfgpetclinic.service.map.OwnerServiceMap;
-import com.arsenbaktiyarov.sfgpetclinic.service.map.VerServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -16,9 +14,10 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VerServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+
+        this.vetService = vetService;
     }
 
     @Override
@@ -29,5 +28,6 @@ public class DataLoader implements CommandLineRunner {
         owner.setLastName("B");
         ownerService.save(owner);
         System.out.println("Owner Created");
+        System.out.println(ownerService.findById(1L));
     }
 }
