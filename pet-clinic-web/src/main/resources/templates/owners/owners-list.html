@@ -14,12 +14,13 @@
             <th style="width: 150px">Last name</th>
         </tr>
         </thead>
+        <tbody>
             <tr th:each="owner : ${owners}">
-                <td th:text="${owner.getId()}">Id</td>
-                <td th:text="${owner.getFirstName()}">Name</td>
-                <td th:text="${owner.getLastName()}">Lastname</td>
+                <tb th:text="${owner.getId()}">Id</tb>
+                <tb th:text="${owner.getFirstName()}">Name</tb>
+                <tb th:text="${owner.getLastName()}">Lastname</tb>
             </tr>
-
+        </tbody>
     </table>
 </body>
 </html>
