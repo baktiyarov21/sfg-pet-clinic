@@ -2,7 +2,7 @@ package com.arsenbaktiyarov.sfgpetclinic.model;
 
 import java.io.Serializable;
 
-public class Speciality extends BaseEntity implements Serializable {
+public class Specialty extends BaseEntity implements Serializable {
     private String description;
 
     public String getDescription() {
