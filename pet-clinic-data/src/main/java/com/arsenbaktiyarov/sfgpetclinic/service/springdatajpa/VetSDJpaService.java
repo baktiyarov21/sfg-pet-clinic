@@ -3,17 +3,19 @@ package com.arsenbaktiyarov.sfgpetclinic.service.springdatajpa;
 import com.arsenbaktiyarov.sfgpetclinic.model.Vet;
 import com.arsenbaktiyarov.sfgpetclinic.repository.VetRepository;
 import com.arsenbaktiyarov.sfgpetclinic.service.VetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import java.util.Set;
 
 @Service
-public class VetSdJpaService implements VetService {
+@Profile("springdatajpa")
+public class VetSDJpaService implements VetService {
 
     private final VetRepository vetRepository;
 
-    public VetSdJpaService(VetRepository vetRepository) {
+    public VetSDJpaService(VetRepository vetRepository) {
         this.vetRepository = vetRepository;
     }
 
