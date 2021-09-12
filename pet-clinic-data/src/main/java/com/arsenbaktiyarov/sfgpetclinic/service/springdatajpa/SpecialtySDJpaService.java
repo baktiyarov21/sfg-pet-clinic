@@ -6,6 +6,7 @@ import com.arsenbaktiyarov.sfgpetclinic.service.SpecialtyService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
@@ -21,7 +22,9 @@ public class SpecialtySDJpaService implements SpecialtyService {
 
     @Override
     public Set<Specialty> findAll() {
-        return (Set<Specialty>) specialtyRepository.findAll();
+        Set<Specialty> specialities = new HashSet<>();
+        specialtyRepository.findAll().forEach(specialities::add);
+        return specialities;
     }
 
     @Override
