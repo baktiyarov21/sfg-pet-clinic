@@ -131,4 +131,17 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
         verify(ownerService).save(ArgumentMatchers.any());
     }
+
+    @Test
+    void processFindFormEmptyReturnMany() throws Exception {
+        when(ownerService.findAllByLastNameLike(anyString()))
+                .thenReturn(Arrays.asList(Owner.builder().id(1l).build(),
+                        Owner.builder().id(2l).build()));
+
+        mockMvc.perform(get("/owners")
+                .param("lastName",""))
+                .andExpect(status().isOk())
+                .andExpect(view().name("owners/owners-list"))
+                .andExpect(model().attribute("selections", hasSize(2)));;
+    }
 }
