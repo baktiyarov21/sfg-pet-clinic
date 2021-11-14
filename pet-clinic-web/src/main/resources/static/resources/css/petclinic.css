@@ -1,0 +1,196 @@
+@import "typography.css";
+@import "header.css";
+@import "responsive.css";
+
+.table > thead > tr > th {
+    background-color: #3c3834;
+    color: #f1f1f1;
+}
+
+.table-filter {
+    background-color: #34302D;
+    padding: 9px 12px;
+}
+
+.nav > li > a {
+    color: #838789;
+}
+
+.btn-default {
+    border-width: 2px;
+    transition: border 0.15s;
+    -webkit-transition: border 0.15s;
+    -moz-transition: border 0.15s;
+    -o-transition: border 0.15s;
+    -ms-transition: border 0.15s;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+    background-color: #34302D;
+    border-color: #34302D;
+}
+
+.container .text-muted {
+    margin: 20px 0;
+}
+
+code {
+    font-size: 80%;
+}
+
+.xd-container {
+    margin-top: 40px;
+    margin-bottom: 100px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+.index-page--subtitle {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 30px;
+}
+
+.form-horizontal button.btn-inverse {
+    margin-left: 32px;
+}
+
+#job-params-modal .modal-dialog {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+[ng-cloak].splash {
+    display: block !important;
+}
+
+[ng-cloak] {
+    display: none;
+}
+
+.splash {
+    background: #6db33f;
+    color: #34302D;
+    display: none;
+}
+
+.error-page {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.error-page .error-title {
+    font-size: 24px;
+    line-height: 24px;
+    margin: 30px 0 0;
+}
+
+table td {
+    vertical-align: middle;
+}
+
+table td .progress {
+    margin-bottom: 0;
+}
+
+table td.action-column {
+    width: 1px;
+}
+
+.help-block {
+    color: #b6afaa;
+}
+
+.xd-containers {
+    font-size: 15px;
+}
+
+.cluster-view > table td {
+    vertical-align: top;
+}
+
+.cluster-view .label,
+.cluster-view .column-block {
+    display: block;
+}
+
+.cluster-view .input-group-addon {
+    width: 0%;
+}
+
+.cluster-view {
+    margin-bottom: 0;
+}
+
+.deployment-status-deployed {
+. label-success;
+}
+
+.deployment-status-incomplete {
+. label-warning;
+}
+
+.deployment-status-failed {
+. label-danger;
+}
+
+.deployment-status-deploying {
+. label-info
+}
+
+.deployment-status-na {
+}
+
+.container-details-table th {
+    background-color: #3c3834;
+    color: #f1f1f1;
+}
+
+.status-help-content-table td {
+    color: #34302D;
+}
+
+.alert-success {
+. alert-variant(fade(#dff0d8, 70 %);
+darken(spin(#dff0d8, - 10), 5 %) #3c763d);
+}
+
+.alert-info {
+. alert-variant(fade(#d9edf7, 70 %);
+darken(spin(#d9edf7, - 10), 7 %) #31708f);
+}
+
+.alert-warning {
+. alert-variant(fade( #dff0d8, 70 %);
+darken(spin(#fcf8e3, - 10), 5 %) #8a6d3b);
+}
+
+.alert-danger {
+. alert-variant(fade(#f2dede, 70 %);
+darken(spin(#f2dede, - 10), 5 %) #a94442);
+}
+
+.myspinner {
+    animation-name: spinner;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-transform-origin: 49% 50%;
+    -webkit-animation-name: spinner;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+hr {
+    border-top: 1px dotted #34302D;
+}
