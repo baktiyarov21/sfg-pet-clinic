@@ -18,9 +18,9 @@
     </thead>
     <tbody>
     <tr th:each="vet : ${vets}">
-        <tb th:text="${vet.getId()}"></tb>
-        <tb th:text="${vet.getFirstName()}"></tb>
-        <tb th:text="${vet.getLastName()}"></tb>
+        <td th:text="${vet.firstName + ' ' + vet.lastName}"></td>
+        <td><span th:each="specialty: ${vet.specialities}"
+        th:text="${specialty.description + ' '}"/><span th:if="${vet?.specialities.size() == 0}"> none</span></td>
     </tr>
     </tbody>
 </table>
